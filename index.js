@@ -185,7 +185,7 @@ const appendInShedule=(el,shedule,maxPower,devices,consumedEnergy)=>{
 
 }
 
-const fun = (inputData, shedule, consumedEnergy) => {
+const scheduling = (inputData, shedule, consumedEnergy) => {
 const {maxPower,devices,rates}=inputData;
     devices.forEach(el => {
         el.stack=[];
@@ -227,7 +227,7 @@ try{
         shedule[i] = [];
     };
     let consumedEnergy = { value: null, devices: {} }
-    fun(inputData, shedule, consumedEnergy);
+    scheduling(inputData, shedule, consumedEnergy);
 }
 catch(err){
  console.log('Error',err.toString())
